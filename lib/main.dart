@@ -17,7 +17,36 @@ class MainApp extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.blueAccent,
         ),
-        body: Center(child: Text('Bienvenue dans cet atelier!'))),
+
+        body: Container(
+          alignment: Alignment.topCenter,
+          child: Column(
+            children: [
+              const SizedBox(height: 20),
+              const Text(
+                "Bienvenue dans cet atelier de perfectionnement Flutter !",
+                style: TextStyle(
+                  fontSize: 24, 
+                  fontWeight: FontWeight.bold,
+                  color: Colors.pinkAccent,
+                )
+              ),
+
+              const SizedBox(height: 20),
+              Image.network(
+                'https://uploads-ssl.webflow.com/6377bf360873283fad488724/638ca82a95fb434e6f42a283_Flutter.png',
+                width: 200,
+              ),
+              const SizedBox(height: 20),
+              const Text(
+                'Découvrez comment développer des applications Flutter de qualité.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16),
+                ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
